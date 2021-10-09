@@ -1,12 +1,17 @@
-html{
+html {
     height: 100%;
-    background: radial-gradient(circle,#fff,#ccc);
+    background: radial-gradient(circle, #fff, #ccc);
     background: url(hack_image.jpg);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
+}
 
-} 
-#nav_bar{
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#nav_bar {
     width: 100%;
     height: 30px;
     margin: 2px auto 10px auto;
@@ -14,48 +19,245 @@ html{
     display: flex;
     justify-content: flex-end;
 }
-.b{
+
+.b {
     /* width: 85px; */
- /* height: 30px; */
- padding: 5px 10px;
- /* background-color: white; */
- /* float: left; */
- margin-right: 5px;
- /* border-radius: 3px; */
- cursor: pointer;
- /* box-shadow: 0px 2px 0px 2px grey; */
- /* text-align: center; */
- /* line-height: 80px; */
- display: flex;
- justify-content: center;
- align-content: center;
- transition: all 0.3s;
-
-
+    /* height: 30px; */
+    /* background-color: white; */
+    /* float: left; */
+    margin-right: 5px;
+    /* border-radius: 3px; */
+    cursor: pointer;
+    /* box-shadow: 0px 2px 0px 2px grey; */
+    /* text-align: center; */
+    /* line-height: 80px; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: all 0.3s;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
 }
 
+.b a {
+    padding: 5px 10px;
+}
 
-#b4{
+#b4 {
     margin-right: 20px;
 }
-.b:hover{
- background-color: rgb(231, 145, 15);
- color: white;
- /* box-shadow:0px 2px 0px 2px rgb(106, 106, 226); */
+
+.b:hover {
+    background-color: rgb(231, 145, 15);
+    color: white;
+    /* box-shadow:0px 2px 0px 2px rgb(106, 106, 226); */
 }
-#menu{
+
+#menu {
     position: fixed;
-    top: 60%;
+    top: 43%;
     left: 5%;
     display: flex;
-    
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
 
-} 
-#menu div{
+#menu div {
     padding: 5px 10px;
     background-color: white;
     color: black;
-    margin-right: 5px;
+    margin-top: 15px;
     font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
+#menu div a {
+    color: black;
+}
+
+#menu div:hover {
+    color: white;
+    background: rgb(231, 145, 15);
+}
+
+.heading {
+    position: fixed;
+    top: 15%;
+    left: calc(50% - 145px);
+    font-size: 35px;
+    color: rgb(231, 145, 15);
+}
+
+
+/* signup styling  */
+
+#signup {
+    width: 40vw;
+    height: 55vh;
+    /* filter: saturate(0.1); */
+    background-color: rgba(230, 243, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 60px;
+}
+
+#signup form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup form input {
+    width: 60%;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 2px 8px;
+    outline: none;
+    outline-style: none;
+    border-radius: 3px;
+    background: transparent;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 10px 2px rgba(101, 200, 247, 0.5);
+}
+
+#signup form input:focus {
+    border: 1px solid rgb(106, 195, 255);
+}
+
+#signup form input[type=submit] {
+    width: 100px;
+    cursor: pointer;
+    box-shadow: none;
+    border: 1px solid transparent;
+    background-color: rgb(255, 171, 103);
+    color: white;
+}
+
+#signup form input[type=submit]:active {
+    background-color: white;
+    border: 1px solid rgb(255, 171, 103);
+    color: rgb(255, 171, 103);
+}
+
+#signup p a:hover {
+    text-decoration: underline;
+}
+
+
+/* login styling  */
+
+#login {
+    width: 40vw;
+    height: 50vh;
+    /* filter: saturate(0.1); */
+    background-color: rgba(230, 243, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 60px;
+}
+
+#login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#login form input {
+    width: 60%;
+    margin-top: 20px;
+    font-size: 19px;
+    padding: 3px 8px;
+    outline: none;
+    outline-style: none;
+    border-radius: 3px;
+    background: transparent;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 10px 2px rgba(101, 200, 247, 0.5);
+}
+
+#login form input:focus {
+    border: 1px solid rgb(106, 195, 255);
+}
+
+#login form input[type=submit] {
+    width: 100px;
+    cursor: pointer;
+    box-shadow: none;
+    border: 1px solid transparent;
+    background-color: rgb(255, 171, 103);
+    color: white;
+}
+
+#login form input[type=submit]:active {
+    background-color: white;
+    border: 1px solid rgb(255, 171, 103);
+    color: rgb(255, 171, 103);
+}
+
+#login p a:hover {
+    text-decoration: underline;
+}
+
+
+/* create timeline styling  */
+
+#create {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(126, 122, 122, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+#create form {
+    width: 40vw;
+    height: 20vw;
+    margin: auto;
+    margin-top: 150px;
+    background-color: rgba(254, 254, 254, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+}
+
+#create form input {
+    margin-bottom: 15px;
+    width: 60%;
+    font-size: 17px;
+    padding: 3px 5px;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px rgb(191, 221, 255);
+}
+
+#create form input:focus {
+    border-color: rgb(140, 190, 255);
+}
+
+#create form input[type=submit] {
+    box-shadow: none;
+    width: 100px;
+    background-color: coral;
+    color: white;
+    cursor: pointer;
+}
+
+#create form input[type=submit]:active {
+    background-color: white;
+    color: coral;
+    border: 1px solid coral;
+}
+
+#create form input::placeholder {
+    text-align: center;
+}
