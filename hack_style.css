@@ -152,7 +152,7 @@ a {
 
 #login {
     width: 40vw;
-    height: 50vh;
+    height: 60vh;
     /* filter: saturate(0.1); */
     background-color: rgba(230, 243, 255, 0.5);
     display: flex;
@@ -259,5 +259,13 @@ a {
 }
 
 #create form input::placeholder {
+    text-align: center;
+}
+
+.warning {
+    color: #a94442;
+    background-color: #f2dede;
+    /* padding-left: 20px; */
+    padding: 5px;
     text-align: center;
 }
