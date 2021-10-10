@@ -29,18 +29,18 @@ if(isset($_SESSION['username'])){
 </head>
 
 <body>
-    <div id="nav_bar">
+<div id="nav_bar">
         <div id="b1" class="b"><a href="index.php">HOME</a></div>
-        <div id="b2" class="b"><a href="search.html">SEARCH</a></div>
-        <div id="b3" class="b"><a href="create.html">CREATE</a></div>
-        <div id="b5" class="b"> <a href="login.php"><?php 
+        <div id="b2" class="b"><a href="search.php">SEARCH</a></div>
+        <div id="b3" class="b"><a href="#">CREATE</a></div>
+        <div id="b5" class="b">  <?php 
 if(isset($_SESSION['username'])){
-    echo 'LOGOUT';
+    echo '<a href="logout.php">LOGOUT';
 }else{
-    echo 'LOGIN';
+    echo '<a href="login.php">LOGIN';
 }
-        ?> </a></div>
-        <div id="b4" class="b"><a href="login.html">ABOUT</a></div>
+        ?></a></div>
+        <div id="b4" class="b"><a href="about.php">ABOUT</a></div>
 
     </div>
     <div id="login">
@@ -59,8 +59,12 @@ $password= md5($_POST['pwd']);
 $sql = "SELECT * FROM user where uname='{$uname}' AND password='{$password}';";
 $result = mysqli_query($conn,$sql);
 if(mysqli_num_rows($result)>0){
+    $row=mysqli_fetch_assoc($result);
     session_start();
     $_SESSION['username']=$uname;
+    $_SESSION['person']=$row['name'];
+    // echo $_SESSION['person'].$_SESSION['username'];
+    // die();
     header("Location: {$hostname}/index.php");
 }else{
     echo '<p class="warning">Username and Password Not matched</p>';

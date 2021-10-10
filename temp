@@ -9,8 +9,7 @@
 
 /* Placeholders */
 
-
-/* @media (min-width: 1000px) {
+@media (min-width: 1000px) {
     #timeline .demo-card:nth-child(odd) .head::after,
     #timeline .demo-card:nth-child(even) .head::after {
         position: absolute;
@@ -30,7 +29,7 @@
         border-radius: 9px;
         box-shadow: 0px 0px 2px 8px #f7f7f7;
     }
-} */
+}
 
 
 /* Some Cool Stuff */
@@ -108,8 +107,7 @@ body {
     margin: auto;
 }
 
-
-/* @media (min-width: 1000px) {
+@media (min-width: 1000px) {
     #timeline .demo-card-wrapper {
         display: flex;
         flex-flow: column wrap;
@@ -117,7 +115,7 @@ body {
         height: auto;
         margin: 0 auto;
     }
-} */
+}
 
 #timeline .demo-card-wrapper::after {
     z-index: 1;
@@ -129,12 +127,11 @@ body {
     border-left: 1px solid rgba(191, 191, 191, 0.4);
 }
 
-
-/* @media (min-width: 1000px) {
+@media (min-width: 1000px) {
     #timeline .demo-card-wrapper::after {
         border-left: 1px solid #bdbdbd;
     }
-} */
+}
 
 #timeline .demo-card {
     position: relative;
@@ -142,25 +139,6 @@ body {
     margin: 10px auto 80px;
     max-width: 94%;
     z-index: 2;
-}
-
-@media (max-width:2560px) {
-    #timeline {
-        width: 1000px;
-        left: calc((50% - 400px)/2);
-    }
-    #timeline .demo-card-wrapper {
-        width: 800px;
-    }
-    #timeline .demo-card {
-        max-width: 70%;
-    }
-    #timeline .demo-card .head {
-        padding: 10px 2px;
-    }
-    #timeline .demo-card .head h2 {
-        line-height: 1 !important;
-    }
 }
 
 @media (max-width:1000px) {
@@ -182,8 +160,7 @@ body {
     }
 }
 
-
-/* @media (min-width: 1000px) {
+@media (min-width: 1000px) {
     #timeline .demo-card {
         max-width: 450px;
         height: 400px;
@@ -216,7 +193,7 @@ body {
     #timeline .demo-card:nth-child(2) {
         margin-top: 180px;
     }
-} */
+}
 
 #timeline .demo-card .head {
     position: relative;
@@ -273,12 +250,11 @@ body {
     padding: 15px;
 }
 
-
-/* @media (min-width: 1000px) {
+@media (min-width: 1000px) {
     #timeline .demo-card .body {
         height: 315px;
     }
-} */
+}
 
 #timeline .demo-card .body p {
     font-size: 14px;
@@ -291,20 +267,12 @@ body {
     width: 100%;
 }
 
-#timeline .demo-card:nth-child(2n) {
+#timeline .demo-card {
     background-color: #46b8e9;
 }
 
-#timeline .demo-card:nth-child(2n) .head::after {
+#timeline .demo-card .head::after {
     border-color: #46b8e9;
-}
-
-#timeline .demo-card:nth-child(2n+1) {
-    background-color: #ce43eb;
-}
-
-#timeline .demo-card:nth-child(2n+1) .head::after {
-    border-color: #ce43eb;
 }
 
 #timeline .demo-card--step1 {
@@ -394,3 +362,45 @@ body {
 #timeline {
     margin-bottom: 100px !important;
 }
+
+<div class="demo-card demo-card--step2"><div class="head"><div class="number-box"><span>02</span></div><h2><a href="">Central Delhi,
+Delhi<span class="small">Vidhan Sabha Metro Gate No 1,
+Mahatma Gandhi Road,
+Civil Lines,
+Civil Lines Tehsil,
+Central Delhi,
+Delhi,
+110054,
+India</span></a></h2></div><div class="body"><p>Lorem ipsum dolor sit amet,
+consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur,
+laudantium odio dolorum laboriosam.</p><img src="image.jpg" alt="Graphic"></div></div><div class="demo-card demo-card--step3"><div class="head"><div class="number-box"><span>03</span></div><h2>Central Delhi,
+Delhi<span class="small">Vidhan Sabha Metro Gate No 1,
+Mahatma Gandhi Road,
+Civil Lines,
+Civil Lines Tehsil,
+Central Delhi,
+Delhi,
+110054,
+India</span></h2></div><div class="body"><p>Lorem ipsum dolor sit amet,
+consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur,
+laudantium odio dolorum laboriosam.</p><img src="image.jpg" alt="Graphic"></div></div><div class="demo-card demo-card--step4"><div class="head"><div class="number-box"><span>04</span></div><!-- <h2><span class="small">Subtitle</span>Consistency</h2>--><h2>Central Delhi,
+Delhi<span class="small">Vidhan Sabha Metro Gate No 1,
+Mahatma Gandhi Road,
+Civil Lines,
+Civil Lines Tehsil,
+Central Delhi,
+Delhi,
+110054,
+India</span></h2></div><div class="body"><p>Lorem ipsum dolor sit amet,
+consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur,
+laudantium odio dolorum laboriosam.</p><img src="image.jpg" alt="Graphic"></div></div><div class="demo-card demo-card--step5"><div class="head"><div class="number-box"><span>05</span></div><!-- <h2><span class="small">Subtitle</span>Conversion</h2>--><h2>Central Delhi,
+Delhi<span class="small">Vidhan Sabha Metro Gate No 1,
+Mahatma Gandhi Road,
+Civil Lines,
+Civil Lines Tehsil,
+Central Delhi,
+Delhi,
+110054,
+India</span></h2></div><div class="body"><p>Lorem ipsum dolor sit amet,
+consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur,
+laudantium odio dolorum laboriosam.</p><img src="image.jpg" alt="Graphic"></div></div>

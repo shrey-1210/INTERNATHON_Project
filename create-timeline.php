@@ -1,3 +1,8 @@
+<?php 
+include 'configure.php';
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,11 +35,17 @@
         <img src="hack_image.jpg" alt="">
     </div>
     <div id="nav_bar">
-        <div id="b1" class="b"><a href="hack_home.html">HOME</a></div>
-        <div id="b2" class="b"><a href="search.html">SEARCH</a></div>
-        <div id="b3" class="b"><a href="create.html">CREATE</a></div>
-        <div id="b5" class="b"> <a href="login.html"> LOGIN</a></div>
-        <div id="b4" class="b"><a href="about.html">ABOUT</a></div>
+        <div id="b1" class="b"><a href="index.php">HOME</a></div>
+        <div id="b2" class="b"><a href="search.php">SEARCH</a></div>
+        <div id="b3" class="b"><a href="#">CREATE</a></div>
+        <div id="b5" class="b">  <?php 
+if(isset($_SESSION['username'])){
+    echo '<a href="logout.php">LOGOUT';
+}else{
+    echo '<a href="login.php">LOGIN';
+}
+        ?></a></div>
+        <div id="b4" class="b"><a href="about.php">ABOUT</a></div>
 
     </div>
 
@@ -48,11 +59,12 @@
                     <div class="number-box">
                         <span>01</span>
                     </div>
-                    <h2>Khair, Uttar Pradesh<span class="small">Khair, Aligarh, Uttar Pradesh, 202138, India</span></h2>
+                    <h2><a href="">Khair, Uttar Pradesh<span class="small">Khair, Aligarh, Uttar Pradesh, 202138, India</a></span>
+                    </h2>
                 </div>
                 <div class="body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                    <img src="http://placehold.it/1000x500" alt="Graphic">
+                    <img src="image.jpg" alt="Graphic">
                 </div>
             </div>
 
@@ -61,11 +73,11 @@
                     <div class="number-box">
                         <span>02</span>
                     </div>
-                    <h2>Central Delhi, Delhi<span class="small">Vidhan Sabha Metro Gate No 1, Mahatma Gandhi Road, Civil Lines, Civil Lines Tehsil, Central Delhi, Delhi, 110054, India</span> </h2>
+                    <h2> <a href=""> Central Delhi, Delhi<span class="small">Vidhan Sabha Metro Gate No 1, Mahatma Gandhi Road, Civil Lines, Civil Lines Tehsil, Central Delhi, Delhi, 110054, India</span></a> </h2>
                 </div>
                 <div class="body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                    <img src="http://placehold.it/1000x500" alt="Graphic">
+                    <img src="image.jpg" alt="Graphic">
                 </div>
             </div>
 
@@ -78,7 +90,7 @@
                 </div>
                 <div class="body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                    <img src="http://placehold.it/1000x500" alt="Graphic">
+                    <img src="image.jpg" alt="Graphic">
                 </div>
             </div>
 
@@ -92,7 +104,7 @@
                 </div>
                 <div class="body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                    <img src="http://placehold.it/1000x500" alt="Graphic">
+                    <img src="image.jpg" alt="Graphic">
                 </div>
             </div>
 
@@ -106,7 +118,7 @@
                 </div>
                 <div class="body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                    <img src="http://placehold.it/1000x500" alt="Graphic">
+                    <img src="image.jpg" alt="Graphic">
                 </div>
             </div>
 

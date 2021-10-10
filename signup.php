@@ -19,12 +19,18 @@ if(isset($_SESSION['username'])){
 </head>
 
 <body>
-    <div id="nav_bar">
+<div id="nav_bar">
         <div id="b1" class="b"><a href="index.php">HOME</a></div>
-        <div id="b2" class="b"><a href="search.html">SEARCH</a></div>
-        <div id="b3" class="b"><a href="create.html">CREATE</a></div>
-        <div id="b5" class="b"> <a href="login.php"> LOGIN</a></div>
-        <div id="b4" class="b"><a href="login.html">ABOUT</a></div>
+        <div id="b2" class="b"><a href="search.php">SEARCH</a></div>
+        <div id="b3" class="b"><a href="#">CREATE</a></div>
+        <div id="b5" class="b">  <?php 
+if(isset($_SESSION['username'])){
+    echo '<a href="logout.php">LOGOUT';
+}else{
+    echo '<a href="login.php">LOGIN';
+}
+        ?></a></div>
+        <div id="b4" class="b"><a href="about.php">ABOUT</a></div>
 
     </div>
     <div id="signup">
@@ -51,6 +57,7 @@ if(isset($_SESSION['username'])){
             if(mysqli_query($conn,$sql1)){
                 session_start();
                 $_SESSION['username']=$uname;
+                $_SESSION['person']=$name;
                 header("Location: {$hostname}/index.php");
             }else{
                 echo '<h1>Query failed</h1>';
