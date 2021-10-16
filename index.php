@@ -145,7 +145,9 @@ if(isset($_SESSION['username'])){
                                     success: function (data) {
                                         if (data.status == true) {
                                             // alert("created")
-                                            console.log(data);
+                                            var url = "http://localhost/INTERNATHON_Project/create-address-point.php?tid="+data.tid;
+                                            window.location.href = url;
+                                            // console.log(data);
                                         } else {
                                             alert("Try Again Getting Some Error");
                                         }

@@ -10,7 +10,14 @@ $desc=$data['desc'];
 include 'configure.php';
 $sql = "INSERT into timeline(pname,tname,counter,destination,descp,uname) VALUES ('{$pname}','{$tname}',1,'{$dest}','{$desc}','{$uname}');";
 if(mysqli_query($conn,$sql)){
-    echo json_encode(array('status'=>true));
+    $sql1="SELECT id FROM timeline where uname='{$uname}' AND destination ='{$dest}' AND tname = '{$tname}' AND descp='{$desc}';";
+    $result=mysqli_query($conn,$sql1);
+    if(mysqli_num_rows($result)>0){
+        $row=mysqli_fetch_assoc($result);
+        echo json_encode(array('status'=>true,'tid'=>$row['id']));
+    }else{
+    echo json_encode(array('status'=>false));
+    }
 }else{
     echo json_encode(array('status'=>false));
 }

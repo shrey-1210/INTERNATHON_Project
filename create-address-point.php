@@ -63,7 +63,7 @@ if(isset($_SESSION['username'])){
     <section id=timeline>
         <h1>TRAVEL TIMELINE</h1>
         <!-- <button onclick="getLocation()">click</button> -->
-        <p class="leader">List of journeys.</p>
+        <p class="leader">List of journeys.<br> (Your Timeline Checkpoint will be created Automatically).</p>
         <div class="demo-card-wrapper">
             <!-- <div class="demo-card demo-card--step1">
                 <div class="head">
@@ -95,7 +95,7 @@ if(isset($_SESSION['username'])){
 }
         ?>
     </form>
-    <div style="margin-top: 50px;">yes</div>
+    <div style="margin-top: 50px;">.</div>
     <script>
         let oldlat="";
         let oldlong="";
